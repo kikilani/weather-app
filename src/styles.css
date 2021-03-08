@@ -12,6 +12,13 @@ form {
 i {
   color: #d60270;
 }
+footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
 
 .search {
   background-color: #9bddff;

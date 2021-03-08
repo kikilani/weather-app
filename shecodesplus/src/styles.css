@@ -1,0 +1,39 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: pink;
+}
+h3 {
+  margin: 30px;
+}
+form {
+  margin-top: 20px;
+  text-align: center;
+}
+i {
+  color: #d60270;
+}
+
+.search {
+  background-color: #9bddff;
+  border-color: #9bddff;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.go {
+  background-color: green;
+  color: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+.large-icon {
+  font-size: 60px;
+  color: #d60270;
+}
+.col {
+  text-align: center;
+  font-size: 18px;
+}
+.weather-description {
+  text-transform: capitalize;
+}

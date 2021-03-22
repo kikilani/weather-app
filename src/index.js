@@ -35,6 +35,11 @@ lowTemp.innerHTML = `L ${minTemp}°F`
 let weather = response.data.weather[0].description;
 let weatherDescription = document.querySelector(".weather-description");
 weatherDescription.innerHTML =`${weather}`;
+let weatherIcon = document.querySelector(".large-icon");
+weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 
 
 }

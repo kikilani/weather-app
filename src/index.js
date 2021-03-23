@@ -26,6 +26,8 @@ let month = months[now.getMonth()];
 currentTime.innerHTML = `It is ${hours}:${minutes} on ${day}, ${month} ${date}`;
 
 function getTemperature(response){
+let cityElement = document.querySelector(".current-city");
+cityElement.innerHTML = response.data.name;
 let temperature = Math.round(response.data.main.temp);
 let currentTemperature = document.querySelector(".current-temp");
 currentTemperature.innerHTML = `${temperature}`
@@ -40,17 +42,21 @@ weatherIcon.setAttribute(
 }
 
 
-function citySearch(event){
-    event.preventDefault();
-    let cityInput = document.querySelector(".search");
-let currentCity = document.querySelector(".current-city");
-currentCity.innerHTML =`${cityInput.value}`;
-let unit =`imperial`;
+
+function search(city) {
+ let unit =`imperial`;
 let apiKey=`d8cb484f7bb8a25ccc8f43355441ee5f`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=${unit}&appid=${apiKey}`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
  axios.get(apiUrl).then(getTemperature);
 }
 
-let submitSearch = document.querySelector(".city");
-submitSearch.addEventListener("submit", citySearch);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector(".search");
+  search(cityInputElement.value);
+}
 
+let submitSearch = document.querySelector(".city");
+submitSearch.addEventListener("submit", handleSubmit);
+
+search("New York");

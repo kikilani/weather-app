@@ -31,8 +31,9 @@ footer {
   max-width: 600px;
 }
 .degrees .active {
-  color: 000000;
+  color: black;
   cursor: default;
+  text-decoration: none;
 }
 
 .degrees .active:hover {

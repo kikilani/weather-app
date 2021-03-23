@@ -1,18 +1,17 @@
 body {
   font-family: "Quicksand", sans-serif;
-  background-color: pink;
+  background-color: #ffd6e2;
 }
 h3 {
   margin: 30px;
+  text-align: center;
 }
 form {
   margin-top: 20px;
   text-align: center;
 }
-i {
-  color: #d60270;
-}
-footer{
+
+footer {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -35,11 +34,6 @@ footer{
 }
 .large-icon {
   font-size: 60px;
-  color: #d60270;
-}
-.col {
-  text-align: center;
-  font-size: 18px;
 }
 .weather-description {
   text-transform: capitalize;

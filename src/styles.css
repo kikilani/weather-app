@@ -18,6 +18,14 @@ footer {
   left: 0;
   text-align: center;
 }
+.degrees .active {
+  color: 000000;
+  cursor: default;
+}
+
+.degrees .active:hover {
+  text-decoration: none;
+}
 
 .search {
   background-color: #9bddff;

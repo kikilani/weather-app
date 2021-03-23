@@ -31,15 +31,17 @@ cityElement.innerHTML = response.data.name;
 let currentTemperature = document.querySelector(".current-temp");
 fahrenheitTemperature = response.data.main.temp;
 currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
-
 let weather = response.data.weather[0].description;
 let weatherDescription = document.querySelector(".weather-description");
 weatherDescription.innerHTML =`${weather}`;
+let windSpeed= document.querySelector(".wind-speed");
+windSpeed.innerHTML = Math.round(response.data.wind.speed);
 let weatherIcon = document.querySelector(".large-icon");
 weatherIcon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  console.log(response);
 }
 
 
